@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Void Aegis</title>
+
+<style>
+html,body{
+  margin:0;
+  padding:0;
+  background:#050505;
+  color:#d0e0e0;
+  font-family:monospace;
+  overflow:hidden;
+}
+
+#ui{
+  position:fixed;
+  top:0; left:0; right:0;
+  height:60px;
+  background:#0f1215;
+  display:flex;
+  align-items:center;
+  justify-content:space-around;
+  border-bottom:1px solid #334455;
+  z-index:10;
+}
+
+button{
+  background:#111;
+  color:#00f0ff;
+  border:1px solid #00f0ff;
+  padding:8px 12px;
+  font-size:14px;
+}
+
+canvas{
+  display:block;
+  margin-top:60px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="ui">
+  <button onclick="selectTower('laser')">Laser</button>
+  <button onclick="selectTower('missile')">Missile</button>
+  <span id="info">Tap tile to place</span>
+</div>
+
+<canvas id="game"></canvas>
+
+<script src="game.js"></script>
+</body>
+</html>
